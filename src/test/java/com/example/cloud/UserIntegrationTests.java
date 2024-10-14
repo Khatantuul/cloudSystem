@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.equalTo;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class UserIntegrationTest {
+public class UserIntegrationTests {
     @Autowired
     private UserRepository userRepository;
 
