@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <!--    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">-->
+    <!--        <encoder>-->
+    <!--            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+    <!--        </encoder>-->
+    <!--    </appender>-->
+
+    <!--    <root level="DEBUG">-->
+    <!--        <appender-ref ref="console" />-->
+    <!--    </root>-->
+    <appender name="file" class="ch.qos.logback.core.FileAppender">
+        <file>/var/log/csye/app.log</file>
+        <append>true</append>
+        <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">
+            <jsonFormatter
+                    class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+            </jsonFormatter>
+            <timestampFormat>yyyy-MM-dd' 'HH:mm:ss.SSS</timestampFormat>
+            <appendLineSeparator>true</appendLineSeparator>
+
+        </layout>
+    </appender>
+    <logger name="jsonLogger" level="TRACE">
+        <appender-ref ref="file" />
+    </logger>
+
+    <root level="DEBUG">
+    </root>
+</Configuration>
