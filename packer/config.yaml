@@ -1,0 +1,22 @@
+logging:
+  receivers:
+    log-receiver:
+      type: files
+      include_paths:
+        - "/var/log/csye/*.log"
+      record_log_file_path: true
+  processors:
+    log-processor:
+      type: parse_json
+      time_key: time
+      time_format: "%Y-%m-%d %H:%M:%S"
+    app-log-processor:
+      type: modify_fields
+      fields:
+        severity:
+          move_from: jsonPayload.level
+  service:
+    pipelines:
+      default_pipeline:
+        receivers: [log-receiver]
+        processors: [log-processor, app-log-processor]
