@@ -1,6 +1,6 @@
-# Spring Boot health check API
+# Web API (cloud system)
 
-This API is to monitor the health of the application instance and alerts us when something is not working as expected.
+This web app is to track new users and deployed on Google Cloud Platform from Packer custom image for compute engines with load balancer.
 
 Prerequisites
 Before you begin, ensure that you have the following installed
