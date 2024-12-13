@@ -1,22 +1,22 @@
-# Web API (cloud system)
+# Java Web API (cloud system)
 
-This web app is to track new users and deployed on Google Cloud Platform from Packer custom image for compute engines with load balancer.
+## Overview
 
-Prerequisites
-Before you begin, ensure that you have the following installed
+A Java (Spring Boot) application for new user tracking, integrated with a CI/CD pipeline for continuous delivery. The application undergoes automated build, testing, and deployment processes and is deployed on a cloud infrastructure that dynamically scales to handle high traffic. Cloud resources are automatically provisioned using Terraform.
 
-Java Development Kit (JDK)
-PostgreSQL for database
-HIbernate for ORM
-Maven for build
-UI Framework: None
-CSS: None
-Getting Started
-Clone the repository:
+## Getting Started
+Before you begin, ensure that you have the following installed:
 
-git clone <git@github.com:Khatantuul-org/webapp.git>
-Configure the PostgreSQL database in src/main/resources/application.properties
+- Java Development Kit (JDK)
+- PostgreSQL for database
+- Hibernate for ORM
+- Maven for build system
 
-The API will be accessible at http://localhost:8080
+<div align="left">
+	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/183345121-36788a6e-5462-424a-be67-af1ebeda79a2.png" alt="Terraform" title="Terraform"/></code>
+	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/183911547-990692bc-8411-4878-99a0-43506cdb69cf.png" alt="GCP" title="GCP"/></code>
+</div>
 
-You can use tools like Postman to interact with the API endpoints
+- Terraform related code is accessible here: https://github.com/Khatantuul/terraform
+- Cloud function code is accessible here: https://github.com/Khatantuul/serverless
+  
